@@ -1,0 +1,14 @@
+{
+  "SmartTableTrial.db::synonyms.SFLIGHT": {
+    "target": {
+      "object": "SFLIGHT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SmartTableTrial.db::synonyms.SCARR": {
+    "target": {
+      "object": "SCARR",
+      "schema": "SFLIGHT"
+    }
+  }
+}

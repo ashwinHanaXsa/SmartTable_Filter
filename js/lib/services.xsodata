@@ -1,0 +1,7 @@
+service namespace "SmartTableTrial.db" {
+    "SmartTableTrial.db::cv_sflight" as "FLIGHT" keys generate local "ID"
+    aggregates always( SUM of "SEATSOCC") ;
+}
+annotations {
+  enable OData4SAP;
+}

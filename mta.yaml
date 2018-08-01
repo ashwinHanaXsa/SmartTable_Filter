@@ -1,0 +1,43 @@
+ID: SmartTableTrial
+_schema-version: '2.0'
+description: 'Application to Understand the Smart table and filters '
+version: 0.0.1
+
+modules:
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+    - name: sflight-grantor
+
+ - name: ui
+   type: html5
+   path: ui
+   requires: 
+     - name: js_api
+       group: destinations
+       properties:
+         name: js_api_be
+         url: ~{url} 
+
+
+ - name: js
+   type: nodejs
+   path: js
+   provides:
+    - name: js_api
+      properties:
+         url: ${default-url}
+   requires:
+    - name: hdi_db
+    
+resources:
+ - name: hdi_db
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+ - name: sflight-grantor
+   type: org.cloudfoundry.existing-service
