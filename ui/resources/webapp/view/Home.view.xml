@@ -1,6 +1,7 @@
 <mvc:View controllerName="ui.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
 	xmlns:u="sap.ui.unified" xmlns:st="sap.ui.comp.smarttable" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns="sap.m"
-	xmlns:table="sap.ui.table" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" height="100%" xmlns:core="sap.ui.core">
+	xmlns:table="sap.ui.table" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" height="100%" xmlns:core="sap.ui.core"
+	xmlns:nav="sap.ui.comp.navpopover">
 	<App class="sapContrast">
 		<pages>
 			<Page title="{i18n>title}" showHeader="false" class="sapUiSizeCompact">
@@ -47,7 +48,7 @@
 								enableAutoBinding="true" editable="false" useVariantManagement="false" useTablePersonalisation="true" header="Flight Details"
 								showRowCount="true">
 								<!--First Approach-->
-								<table:Table>
+								<!--<table:Table>
 									<table:columns>
 										<table:Column>
 											<table:customData>
@@ -59,7 +60,7 @@
 											</table:template>
 										</table:Column>
 									</table:columns>
-								</table:Table>
+								</table:Table>-->
 								<!--Second Approach-->
 								<!--	<table:AnalyticalColumn >
 									<table:customData>
